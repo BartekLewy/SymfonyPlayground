@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>app/index</h1>
+{% if user %}
+    <p>{{user.username}}! 
+    That's the best day to do something, 
+    now you can check some other options or you can just logout <a href="{{ path('security-logout') }}">here</a></p>
+{% else %}
+    You are not logged, please <a href="{{ path('security-login') }}">Login</a>
+{% endif %}
+{% endblock %}

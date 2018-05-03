@@ -1,0 +1,10 @@
+app-index:
+   path: /
+   controller: App\Controller\AppController::index
+
+security-login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+  
+security-logout:
+  path: /logout
