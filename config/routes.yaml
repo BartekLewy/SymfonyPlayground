@@ -6,5 +6,9 @@ security-login:
   path: /login
   controller: App\Controller\SecurityController::login
   
+users-index:
+  path: /users
+  controller: App\Controller\UserController::index
+
 security-logout:
   path: /logout
