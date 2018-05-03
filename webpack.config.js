@@ -30,6 +30,7 @@ Encore
     })
     .enableSourceMaps(!Encore.isProduction())
     .enableReactPreset()
+    .enableVersioning()
 ;
 
 module.exports = Encore.getWebpackConfig();
