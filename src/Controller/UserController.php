@@ -10,6 +10,8 @@ class UserController extends Controller
 {
     public function index(): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+
         $users = $this->getDoctrine()->getRepository(User::class)->findAll();
         return $this->render('user/index.html.twig', ['users' => $users]);
     }
